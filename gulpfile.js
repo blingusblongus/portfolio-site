@@ -9,8 +9,16 @@ gulp.task('html', function() {
     console.log("Imagine something useful");
 });
 
+gulp.task('styles', function() {
+    console.log("Imagine sass or postcss running");
+});
+
 gulp.task('watch', function(){
     watch('./app/index.html', function(){
         gulp.start('html');
     });
+
+    watch('./app/assets/styles/**/*.css', function(){
+        gulp.start('styles');
+    })
 });
