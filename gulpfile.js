@@ -10,7 +10,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('styles', function() {
-    console.log("Imagine sass or postcss running");
+    return gulp.src('./app/assets/styles/styles.css')
+        .pipe(
+            gulp.dest('./app/temp/styles')
+        );
 });
 
 gulp.task('watch', function(){
